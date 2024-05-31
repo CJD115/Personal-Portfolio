@@ -35,7 +35,7 @@
             </div>
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experiance" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
@@ -47,10 +47,21 @@
             <img src="./assets/profile-pic.png" alt="Connor Davis Picture" />
         </div>
         <div class="section__text">
-            <p class="section__text__p1">Hello Im</p>
+            <p class="section__text__p1">Hello I'm</p>
             <h1 class="title">Connor Davis</h1>
-            <p class="section__text__p2">Front end developer</p>
+            <p class="section__text__p2">Front-End Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact me</button>
+            </div>
+            <div id="socials-container">
+<!--                Add linkedn URL-->
+                <img src="./assets/linkedin.png" alt="My Linkedn Profile" class="icon" onclick="location.href=''">
+<!--                Add GitHubURL-->
+                <img src="./assets/github.png" alt="MyGitHub Profile" class="icon" onclick="location.href=''">
+            </div>
         </div>
+
     </section>
 
 <script src="script.js"></script>
