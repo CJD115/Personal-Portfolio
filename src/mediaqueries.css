@@ -6,6 +6,10 @@
     .about-containers {
         flex-wrap: wrap;
     }
+    .details-container {
+        flex: 1 1 calc(33.333% - 20px); /* 3 columns */
+        margin: 10px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,6 +44,10 @@
     }
     .about-containers {
         margin-top: 0;
+    }
+    .details-container {
+        flex: 1 1 calc(50% - 20px); /* 2 columns */
+        margin: 10px;
     }
 }
 
