@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/mediaqueries.css">
+    <script defer src="src/script.js"></script>
 
 
 </head>
@@ -36,7 +37,7 @@
 <nav id="hamburger-nav">
     <div class="logo">Connor Davis</div>
     <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="hamburger-icon" onclick="toggleMenu(); console.log('Hamburger menu clicked')">
             <span></span>
             <span></span>
             <span></span>
@@ -200,7 +201,7 @@
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/iO-Academy/2024-mar-sde-email-client-woolly-mammoths'">GitHub</button>
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Live Demo</button>
-                    <button class="btn btn-color-2 project-btn primary" onclick="openDialog('dialog-1')" data-dialog="dialog-1">Learn More</button>
+                    <button class="btn btn-color-2 project-btn primary" data-dialog="dialog-1">Learn More</button>
 
                     <dialog id="dialog-1">
                         <h2>Email Client Project</h2>
@@ -218,7 +219,7 @@
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">GitHub</button>
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Live Demo</button>
-                    <button class="btn btn-color-2 project-btn primary" onclick="openDialog('dialog-1')" data-dialog="dialog-1"">Learn More</button>
+                    <button class="btn btn-color-2 project-btn primary" data-dialog="dialog-2">Learn More</button>
 
                     <dialog id="dialog-2">
                         <h2>Furniture Store Database Project</h2>
@@ -236,7 +237,7 @@
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">GitHub</button>
                     <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com'">Live Demo</button>
-                    <button class="btn btn-color-2 project-btn primary" onclick="openDialog('dialog-1')" data-dialog="dialog-1">Learn More</button>
+                    <button class="btn btn-color-2 project-btn primary" data-dialog="dialog-3">Learn More</button>
 
                     <dialog id="dialog-3">
                         <h2>Annual Price Toggle Project</h2>
@@ -250,7 +251,6 @@
     </div>
     <img src="assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='#contact'" />
 </section>
-
 
 <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
@@ -281,7 +281,7 @@
     <p>Copyright &#169; 2024 Connor Davis. All Rights Reserved. </p>
 </footer>
 
-<script src="src/script.js"></script>
+
 
 </body>
 </html>

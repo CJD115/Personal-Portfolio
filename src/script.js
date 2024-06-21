@@ -1,7 +1,10 @@
 // Toggle hamburger menu
 function toggleMenu() {
     const menuLinks = document.querySelector('.menu-links');
-    menuLinks.classList.toggle('active');
+    const hamburgerIcon = document.querySelector('.hamburger-icon');
+
+    menuLinks.classList.toggle('open');
+    hamburgerIcon.classList.toggle('open');
 }
 
 // Close all open dialogs
@@ -27,13 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (event) => {
             const dialogId = event.target.getAttribute('data-dialog');
             openDialog(dialogId);
+            document.querySelectorAll('dialog[open]').forEach(d => d.style.display = "flex");
         });
     });
 
+    // Add click event listeners to all close buttons
     document.querySelectorAll('.x').forEach(button => {
         button.addEventListener('click', (event) => {
             const dialog = event.target.closest('dialog');
+            dialog.style.display = "none";
             closeDialog(dialog.id);
         });
     });
+
+    closeDialogs();
 });

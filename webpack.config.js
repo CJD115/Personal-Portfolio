@@ -1,9 +1,11 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/script.js',
     output: {
-        filename: 'main.js',
+        filename: 'script.js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
@@ -26,6 +28,13 @@ module.exports = {
         port: 1234,
         historyApiFallback: true, // Ensures SPA routing works correctly
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html', // Path to your HTML template file
+            filename: 'index.html', // Output HTML filename
+            inject: 'body', // Inject scripts into the body or head
+        }),
+        ],
     resolve: {
         fallback: {
             "path": require.resolve("path-browserify"),
